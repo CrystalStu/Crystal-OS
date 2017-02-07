@@ -55,18 +55,18 @@ REM	GOTO EXIT
 :1E
 IF "%SOLUTION%"=="2" (GOTO 2S) ELSE GOTO 2E
 :2S
-	pack.exe a -hp%PSW% -m5 -y -as -ed repo\code.repo Crystal-OS\Code
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-mingw.repo Crystal-OS\Tools\mingw
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-nasm.repo Crystal-OS\Tools\nasm
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-nasm-64.repo Crystal-OS\Tools\nasm_64
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-qemu.repo Crystal-OS\Tools\qemu
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winhex.repo Crystal-OS\Tools\winhex
-REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winimage.repo Crystal-OS\Tools\winimage
+	pack.exe a -hp%PSW% -m5 -y -as -ed repo\code.rar Crystal-OS\Code
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-mingw.rar Crystal-OS\Tools\mingw
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-nasm.rar Crystal-OS\Tools\nasm
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-nasm-64.rar Crystal-OS\Tools\nasm_64
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-qemu.rar Crystal-OS\Tools\qemu
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winhex.rar Crystal-OS\Tools\winhex
+REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winimage.rar Crystal-OS\Tools\winimage
 	ECHO /Crystal-OS>.gitignore
 	ECHO /DEVTMP>>.gitignore
 	ECHO pass.dat>>.gitignore
 	ECHO /repo filter=lfs diff=lfs merge=lfs -text>.gitattributes
-	ECHO *.repo filter=lfs diff=lfs merge=lfs -text>>.gitattributes
+	ECHO *.rar filter=lfs diff=lfs merge=lfs -text>>.gitattributes
 	GIT add .
 	GIT commit -a -m "COMMIT_REQUEST_BY_TUNNEL (D:%CD%,T:%TIME%,U:%USERNAME%)"
 	GIT push origin master
@@ -76,7 +76,7 @@ IF "%SOLUTION%"=="3" (GOTO 3S) ELSE GOTO 3E
 :3S
 	GIT fetch
 	GIT pull origin master
-	pack.exe x -p%PSW% -y repo\code.repo
+	pack.exe x -p%PSW% -y repo\code.rar
 	GOTO EXIT
 :3E
 IF "%SOLUTION%"=="4" (GOTO 4S) ELSE GOTO 4E
@@ -91,13 +91,13 @@ ECHO Command not found.
 GOTO EXIT
 
 :UNPACK
-	pack.exe x -p%PSW% -y repo\code.repo
-	pack.exe x -p%PSW% -y repo\tool-mingw.repo
-	pack.exe x -p%PSW% -y repo\tool-nasm.repo
-	pack.exe x -p%PSW% -y repo\tool-nasm-64.repo
-	pack.exe x -p%PSW% -y repo\tool-qemu.repo
-	pack.exe x -p%PSW% -y repo\tool-winhex.repo
-	pack.exe x -p%PSW% -y repo\tool-winimage.repo
+	pack.exe x -p%PSW% -y repo\code.rar
+	pack.exe x -p%PSW% -y repo\tool-mingw.rar
+	pack.exe x -p%PSW% -y repo\tool-nasm.rar
+	pack.exe x -p%PSW% -y repo\tool-nasm-64.rar
+	pack.exe x -p%PSW% -y repo\tool-qemu.rar
+	pack.exe x -p%PSW% -y repo\tool-winhex.rar
+	pack.exe x -p%PSW% -y repo\tool-winimage.rar
 	GOTO EXIT
 
 :EXIT
