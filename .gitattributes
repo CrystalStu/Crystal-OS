@@ -1,0 +1,2 @@
+/repo filter=lfs diff=lfs merge=lfs -text
+*.repo filter=lfs diff=lfs merge=lfs -text
