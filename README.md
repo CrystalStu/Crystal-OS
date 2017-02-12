@@ -1,4 +1,4 @@
-Crystal-OS: A windows-like and linux-like system
+![Logo](https://crystalstu.github.io/Crystal-OS/assets/img/logo.png)  Crystal-OS: A windows-like and linux-like system
 ==========================================
 -----------------------------------
 > 
