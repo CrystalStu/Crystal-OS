@@ -72,9 +72,6 @@ REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-nasm-64.rar Crystal-OS\Tools\na
 REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-qemu.rar Crystal-OS\Tools\qemu
 REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winhex.rar Crystal-OS\Tools\winhex
 REM	pack.exe a -hp%PSW% -m5 -y -as -ed repo\tool-winimage.rar Crystal-OS\Tools\winimage
-	ECHO /Crystal-OS>.gitignore
-	ECHO /DEVTMP>>.gitignore
-	ECHO pass.dat>>.gitignore
 	ECHO /repo filter=lfs diff=lfs merge=lfs -text>.gitattributes
 	ECHO *.rar filter=lfs diff=lfs merge=lfs -text>>.gitattributes
 	GIT add .
