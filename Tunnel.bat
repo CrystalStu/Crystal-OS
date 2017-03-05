@@ -113,5 +113,5 @@ GOTO EXIT
 :EXIT
 	ECHO Press any key to exit..
 	PAUSE >NUL
-	START CMD.EXE /K @ECHO Session ended at %TIME%, but the console cannot use to reopen the tunnel.
+REM	START CMD.EXE /K @ECHO Session ended at %TIME%, but the console cannot use to reopen the tunnel.
 	EXIT
